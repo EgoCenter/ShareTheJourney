@@ -152,7 +152,7 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 
 - (void) setUpInitializationOptions
 {
-    [APCUtilities setRealApplicationName: @"Share the Journey"];
+    [APCUtilities setRealApplicationName: @"Moody"];
 	
 	NSMutableDictionary * dictionary = [super defaultInitializationOptions];
 #ifdef DEBUG
@@ -165,7 +165,7 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
                                            kStudyIdentifierKey                  : kStudyIdentifier,
                                            kAppPrefixKey                        : kAppPrefix,
                                            kBridgeEnvironmentKey                : @(self.environment),
-                                           kShareMessageKey : NSLocalizedString(@"Check out Share the Journey, a research study app about breast cancer survivorship.  Download it for iPhone at https://appsto.re/i6LF2f6", nil)
+                                           kShareMessageKey : NSLocalizedString(@"Check out Moody, a research study app about mood.  Download it for iPhone at https://appsto.re/i6LF2f6", nil)
                                            }];
     self.initializationOptions = dictionary;
 	self.profileExtender = [[APHProfileExtender alloc] init];
