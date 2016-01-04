@@ -33,10 +33,13 @@
  
 #import <UIKit/UIKit.h>
 @import APCAppCore;
+#import "APHHeartRateSink.h"
 
 extern NSString* const kDailySurveyIdentifier;
 
 @interface APHAppDelegate : APCAppDelegate
+
+@property (nonatomic, strong) APHHeartRateSink* heartRateSink;
 
 @end
 
