@@ -7,8 +7,8 @@
     "questions":
     [
      {
-     "title":"Welcome to Share the Journey",
-     "details":"A Breast Cancer Research Study",
+     "title":"Welcome to Moody",
+     "details":"A Global Mood Research Study",
      },
      
      {
@@ -18,28 +18,10 @@
      },
      
      {
-     "title":"About the App",
-     "details":"Please tap on the image below to watch a short video introduction to Share the Journey.",
-     "video_name" : "Intro",
-     },
-     
-     {
      "title":"How this Study Works",
      "details":"howstudyworks_intro",
      
-     },
-     
-     {
-     "title":"How this Study Works",
-     "details":"feedback_intro",
-     
-     },
-     
-     
-     {
-     "title":"Who is Running this Study",
-     "details":"whoisrunning_intro",
-    
      }
+  
      ]
 }

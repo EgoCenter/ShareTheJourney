@@ -1,6 +1,26 @@
 {
     "schedules": [
-                                    {
+                  {
+                  "scheduleType"    : "recurring",
+                  "delay"           : "P7D",
+                  "interval"        : "P7D",
+                  "tasks"           : [{
+                                       "taskTitle": "Weekly Exercise Check-in",
+                                       "taskID": "a-APHWeeklyExerciseSurvey-1259AC11-A719-17A9-ZDBA-FCFCECDED1D6",
+                                       "taskClassName": "APHExerciseCheckInTaskViewController",
+                                       "taskCompletionTimeString" : "1 Minutes"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "tasks"           : [{
+                                       "taskTitle": "Exercise Motivator",
+                                       "taskID": "4-APHExerciseSurvey-7259AC18-D711-47A6-ADBD-6CFCECDED1DF",
+                                       "taskClassName": "APHExerciseSurveyTaskViewController",
+                                       "taskCompletionTimeString" : "2 Minutes"
+                                       }]
+                  },
+                  {
                   "scheduleType"    : "recurring",
                   "scheduleString"  : "0 5 * * *",
                   "tasks"           : [{
@@ -10,7 +30,40 @@
                                        "taskCompletionTimeString" : "2 Minutes"
                                        }]
                   },
-                  
+                  {
+                  "scheduleType"    : "recurring",
+                  "scheduleString"  : "0 5 * * *",
+                  "tasks"           : [{
+                                       "taskTitle" : "My Journal",
+                                       "taskID": "6-APHDailyJournal-80F09109-265A-49C6-9C5D-765E49AAF5D9",
+                                       "taskClassName" : "APHDailyJournalTaskViewController",
+                                       "optional": true
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "recurring",
+                  "scheduleString"  : "0 5 * * *",
+                  "tasks"           : [{
+                                       "taskTitle" : "My Thoughts",
+                                       "taskID": "7-MyThoughts-14ffde40-1551-4b48-aae2-8fef38d61b61",
+                                       "taskFileName" : "BCS_mythoughts",
+                                       "taskClassName" : "APCGenericSurveyTaskViewController",
+                                       "taskCompletionTimeString" : "2 Questions",
+                                       "optional": true
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "recurring",
+                  "scheduleString"  : "0 5 * * *",
+                  "tasks"           : [{
+                                       "taskTitle" : "Study Feedback",
+                                       "taskID": "8-Feedback-394848ce-ca4f-4abe-b97e-fedbfd7ffb8e",
+                                       "taskFileName" : "BCS_feedback",
+                                       "taskClassName" : "APCGenericSurveyTaskViewController",
+                                       "taskCompletionTimeString" : "1 Question",
+                                       "optional": true
+                                       }]
+                  },
                   {
                   "scheduleType"    : "once",
                   "tasks"           : [{
@@ -32,6 +85,135 @@
                                        "taskClassName" : "APCGenericSurveyTaskViewController",
                                        "taskCompletionTimeString" : "28 Questions"
                                        }]
+                  },
+                  
+                  
+                  {
+                  "scheduleType"    : "once",
+                  "delay"           : "P8D",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle": "Heart/Stroke Risk Score + Heart Age",
+                                       "taskID": "2-APHHeartAge-7259AC18-D711-47A6-ADBD-6CFCECDED1DF",
+                                       "taskClassName": "APHHeartAgeTaskViewController",
+                                       "taskCompletionTimeString" : "9 Questions"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "delay"           : "P8D",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle": "6-Minute Walk Test",
+                                       "taskID": "3-APHFitnessTest-00000000-1111-1111-1111-F810BE28D995",
+                                       "taskClassName": "APHFitnessTaskViewController",
+                                       "taskCompletionTimeString" : "6-9 Minutes"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "recurring",
+                  "scheduleString"  : "0 5 * * *",
+                  "interval"        : "P1D",
+                  "tasks"           : [{
+                                       "taskTitle": "7-Day Activity and Sleep Assessment",
+                                       "taskID": "3-APHSevenDayAllocation-00000000-1111-1111-1111-F810BE28D995",
+                                       "taskClassName": "APHSevenDayFitnessAllocationTaskViewController"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Activity and Sleep Survey",
+                                       "taskID": "2-CardioActivityAndSleepSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66",
+                                       "taskFileName" : "cardio_activitysleep_survey",
+                                       "taskClassName" : "APCGenericSurveyTaskViewController",
+                                       "taskCompletionTimeString" : "8 Questions"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "delay"           : "P2D",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Cardiovascular Health Survey",
+                                       "taskID": "3-CardioVascularHealthSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66",
+                                       "taskFileName" : "cardio_CVhealth_survey",
+                                       "taskClassName" : "APHCardiovascularHealthSurveyController",
+                                       "taskCompletionTimeString" : "4 Questions"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "delay"           : "P2D",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Diet Survey",
+                                       "taskID": "4-DietSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66",
+                                       "taskFileName" : "cardio_diet_survey",
+                                       "taskClassName" : "APHDietSurveyViewController",
+                                       "taskCompletionTimeString" : "6 Questions"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "delay"           : "P2D",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Well-Being and Risk Perception Survey",
+                                       "taskID": "2-WellBeingAndRiskPerceptionSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66",
+                                       "taskFileName" : "cardio_wellbeing_survey",
+                                       "taskClassName" : "APHWellBeingSurveyController",
+                                       "taskCompletionTimeString" : "(One Time) 10 Questions Part 1"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "delay"           : "P8D",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Well-Being and Risk Perception Survey",
+                                       "taskID": "5-WellBeingAndRiskPerceptionSurvey-1E174061-5B02-11E4-8ED6-0800200C0000",
+                                       "taskFileName" : "cardio_wellbeing_survey",
+                                       "taskClassName" : "APHWellBeingSurveyController",
+                                       "taskCompletionTimeString" : "(One Time) 10 Questions Part 2"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Physical Activity Readiness",
+                                       "taskID": "1-parqquiz-1E174061-5B02-11E4-8ED6-0800200C9A77",
+                                       "taskClassName" : "APHParQQuizTaskViewController",
+                                       "taskCompletionTimeString" : "10 Questions"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "scheduleString"  : "0 5 * * *",
+                  "delay"           : "P2D",
+                  "interval"        : "P1D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Daily Check-in",
+                                       "taskID": "1-DailyCheckin-be42dc21-4706-478a-a398-10cabb9c7d78",
+                                       "taskFileName" : "cardio_daily_check",
+                                       "taskClassName" : "APCGenericSurveyTaskViewController",
+                                       "taskCompletionTimeString" : "10 Questions"
+                                       }]
+                  },
+                  {
+                  "scheduleType"    : "once",
+                  "interval"        : "P90D",
+                  "tasks"           : [{
+                                       "taskTitle" : "Day One Check-in",
+                                       "taskID": "4-DayOne-be42dc21-4706-478a-a398-10cabb9c7d78",
+                                       "taskFileName" : "cardio_day_one",
+                                       "taskClassName" : "APCGenericSurveyTaskViewController",
+                                       "taskCompletionTimeString" : "(One Time) 3 Questions"
+                                       }]
                   }
+                  
+                  
                   ]
 }

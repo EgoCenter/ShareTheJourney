@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A4E1411C3AC853003E9984 /* APHCardiovascularHealthSurveyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E1391C3AC853003E9984 /* APHCardiovascularHealthSurveyController.m */; };
+		04A4E1421C3AC853003E9984 /* APHFitnessTest in Resources */ = {isa = PBXBuildFile; fileRef = 04A4E13A1C3AC853003E9984 /* APHFitnessTest */; };
+		04A4E1431C3AC853003E9984 /* APHWellBeingSurveyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4E13C1C3AC853003E9984 /* APHWellBeingSurveyController.m */; };
+		04A4E1441C3AC853003E9984 /* Diet Survey in Resources */ = {isa = PBXBuildFile; fileRef = 04A4E13D1C3AC853003E9984 /* Diet Survey */; };
+		04A4E1451C3AC853003E9984 /* Healthy Heart in Resources */ = {isa = PBXBuildFile; fileRef = 04A4E13E1C3AC853003E9984 /* Healthy Heart */; };
+		04A4E1461C3AC853003E9984 /* HeartAgeControllers in Resources */ = {isa = PBXBuildFile; fileRef = 04A4E13F1C3AC853003E9984 /* HeartAgeControllers */; };
+		04A4E1471C3AC853003E9984 /* Seven Day Allocation in Resources */ = {isa = PBXBuildFile; fileRef = 04A4E1401C3AC853003E9984 /* Seven Day Allocation */; };
 		083D6AFA1AA4AE130064AADD /* APHBackgroundSurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083D6AF91AA4AE130064AADD /* APHBackgroundSurveyViewController.m */; };
 		083D6AFE1AA4AE430064AADD /* APHSymptomSurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083D6AFD1AA4AE430064AADD /* APHSymptomSurveyViewController.m */; };
 		083D6B0D1AA4AEAD0064AADD /* APHWeeklySurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 083D6B0C1AA4AEAD0064AADD /* APHWeeklySurveyViewController.m */; };
@@ -198,6 +205,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04A4E1381C3AC853003E9984 /* APHCardiovascularHealthSurveyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APHCardiovascularHealthSurveyController.h; path = ../../../MyHeartCounts/CardioHealth/TasksAndSteps/APHCardiovascularHealthSurveyController.h; sourceTree = "<group>"; };
+		04A4E1391C3AC853003E9984 /* APHCardiovascularHealthSurveyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APHCardiovascularHealthSurveyController.m; path = ../../../MyHeartCounts/CardioHealth/TasksAndSteps/APHCardiovascularHealthSurveyController.m; sourceTree = "<group>"; };
+		04A4E13A1C3AC853003E9984 /* APHFitnessTest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = APHFitnessTest; path = ../../../MyHeartCounts/CardioHealth/TasksAndSteps/APHFitnessTest; sourceTree = "<group>"; };
+		04A4E13B1C3AC853003E9984 /* APHWellBeingSurveyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APHWellBeingSurveyController.h; path = ../../../MyHeartCounts/CardioHealth/TasksAndSteps/APHWellBeingSurveyController.h; sourceTree = "<group>"; };
+		04A4E13C1C3AC853003E9984 /* APHWellBeingSurveyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APHWellBeingSurveyController.m; path = ../../../MyHeartCounts/CardioHealth/TasksAndSteps/APHWellBeingSurveyController.m; sourceTree = "<group>"; };
+		04A4E13D1C3AC853003E9984 /* Diet Survey */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Diet Survey"; path = "../../../MyHeartCounts/CardioHealth/TasksAndSteps/Diet Survey"; sourceTree = "<group>"; };
+		04A4E13E1C3AC853003E9984 /* Healthy Heart */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Healthy Heart"; path = "../../../MyHeartCounts/CardioHealth/TasksAndSteps/Healthy Heart"; sourceTree = "<group>"; };
+		04A4E13F1C3AC853003E9984 /* HeartAgeControllers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = HeartAgeControllers; path = ../../../MyHeartCounts/CardioHealth/TasksAndSteps/HeartAgeControllers; sourceTree = "<group>"; };
+		04A4E1401C3AC853003E9984 /* Seven Day Allocation */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Seven Day Allocation"; path = "../../../MyHeartCounts/CardioHealth/TasksAndSteps/Seven Day Allocation"; sourceTree = "<group>"; };
 		083D6AF81AA4AE130064AADD /* APHBackgroundSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APHBackgroundSurveyViewController.h; path = "Generic Surveys/APHBackgroundSurveyViewController.h"; sourceTree = "<group>"; };
 		083D6AF91AA4AE130064AADD /* APHBackgroundSurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APHBackgroundSurveyViewController.m; path = "Generic Surveys/APHBackgroundSurveyViewController.m"; sourceTree = "<group>"; };
 		083D6AFC1AA4AE430064AADD /* APHSymptomSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APHSymptomSurveyViewController.h; path = "Generic Surveys/APHSymptomSurveyViewController.h"; sourceTree = "<group>"; };
@@ -735,6 +751,15 @@
 		F534B60C19E4689D00C3C152 /* TasksAndSteps */ = {
 			isa = PBXGroup;
 			children = (
+				04A4E1381C3AC853003E9984 /* APHCardiovascularHealthSurveyController.h */,
+				04A4E1391C3AC853003E9984 /* APHCardiovascularHealthSurveyController.m */,
+				04A4E13A1C3AC853003E9984 /* APHFitnessTest */,
+				04A4E13B1C3AC853003E9984 /* APHWellBeingSurveyController.h */,
+				04A4E13C1C3AC853003E9984 /* APHWellBeingSurveyController.m */,
+				04A4E13D1C3AC853003E9984 /* Diet Survey */,
+				04A4E13E1C3AC853003E9984 /* Healthy Heart */,
+				04A4E13F1C3AC853003E9984 /* HeartAgeControllers */,
+				04A4E1401C3AC853003E9984 /* Seven Day Allocation */,
 				087B44A71B1B981100568999 /* ExerciseCheckIn */,
 				7B7953031A22849300AA8039 /* ExerciseSurvey */,
 				7B5E25C71A20454200A04FEF /* Mood Survey */,
@@ -815,6 +840,7 @@
 				TargetAttributes = {
 					F534B58219E4681E00C3C152 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = REAPRG8W9V;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -913,11 +939,14 @@
 			files = (
 				7BA3AC111A23DDBC0017B3C8 /* APHExerciseMotivationIntroViewController.xib in Resources */,
 				087B44C61B1B9C6000568999 /* BCSWeeklySurvey.json in Resources */,
+				04A4E1461C3AC853003E9984 /* HeartAgeControllers in Resources */,
 				A7D61A5E1A97B2D700637EDA /* 13_RiskToPrivacy@2x.m4v in Resources */,
+				04A4E1421C3AC853003E9984 /* APHFitnessTest in Resources */,
 				5B15DCF51A114F7000BEA0D1 /* WithdrawStudy.json in Resources */,
 				7B8B67DD1A6711BE0021606D /* APHExerciseMotivationSummaryViewController.storyboard in Resources */,
 				5B15DD3E1A114F9000BEA0D1 /* APHOnboarding.storyboard in Resources */,
 				7B7953151A2288D600AA8039 /* APHQuestionViewController.xib in Resources */,
+				04A4E1471C3AC853003E9984 /* Seven Day Allocation in Resources */,
 				5B1D9D6C1A1BD414000F4AD6 /* APHDashboard.storyboard in Resources */,
 				CF5FAB4319F95C8F0006CA71 /* APHContentsViewController.xib in Resources */,
 				A7D61A581A97B2D700637EDA /* 00_Blank_to_Activities@2x.m4v in Resources */,
@@ -952,12 +981,14 @@
 				7BFD567A1A24FAF0001210A2 /* APHDisplayLogHistoryViewController.xib in Resources */,
 				A7D61A631A97B2D700637EDA /* 11_IssuesToConsider1@3x.m4v in Resources */,
 				A7D61A591A97B2D700637EDA /* 01_Activities_to_SensorData@2x.m4v in Resources */,
+				04A4E1451C3AC853003E9984 /* Healthy Heart in Resources */,
 				7B8D703F1A1C4B13003A7A5B /* APHLogSubmissionViewController.xib in Resources */,
 				CF2697EB19EC3E4200525E19 /* APHNotesViewController.xib in Resources */,
 				5B1095C01A9FA0B5006631F5 /* consent.pdf in Resources */,
 				087B44C31B1B9C6000568999 /* BCS_mythoughts.json in Resources */,
 				7B5E25D11A20592400A04FEF /* APHHeartAgeIntroStepViewController.xib in Resources */,
 				F534B69C19E4689D00C3C152 /* LaunchScreen.xib in Resources */,
+				04A4E1441C3AC853003E9984 /* Diet Survey in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1027,7 @@
 				7BB24C361A831EC900AAE097 /* APHCustomSurveyQuestionViewController.m in Sources */,
 				CF2697E719EC3E4200525E19 /* APHCustomTextView.m in Sources */,
 				F53F27A01A2D30D600A1D725 /* APHDataPoint.m in Sources */,
+				04A4E1411C3AC853003E9984 /* APHCardiovascularHealthSurveyController.m in Sources */,
 				7B8D703E1A1C4B13003A7A5B /* APHLogSubmissionViewController.m in Sources */,
 				215C53671A8C5D6F0006F7DC /* APHNotesHeaderTableViewCell.m in Sources */,
 				CF2697EA19EC3E4200525E19 /* APHNotesViewController.m in Sources */,
@@ -1003,6 +1035,7 @@
 				7BA3AC101A23DDBC0017B3C8 /* APHExerciseMotivationIntroViewController.m in Sources */,
 				7B79530E1A22884500AA8039 /* APHExerciseSurveyTaskViewController.m in Sources */,
 				5B1D9D6D1A1BD414000F4AD6 /* APHDashboardEditViewController.m in Sources */,
+				04A4E1431C3AC853003E9984 /* APHWellBeingSurveyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1169,7 @@
 				);
 				INFOPLIST_FILE = BreastCancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.advatarsystems.EgoCenter.Moody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1156,6 +1190,7 @@
 				);
 				INFOPLIST_FILE = BreastCancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.advatarsystems.EgoCenter.Moody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1225,6 +1260,7 @@
 				);
 				INFOPLIST_FILE = BreastCancer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.advatarsystems.EgoCenter.Moody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
