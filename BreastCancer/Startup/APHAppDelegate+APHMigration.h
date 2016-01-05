@@ -1,6 +1,6 @@
 //
 //  APHAppDelegate+APHMigration.h
-//  Share the Journey
+//  Embody
 //
 // Copyright (c) 2015, Sage Bionetworks. All rights reserved.
 //

@@ -1,6 +1,6 @@
 // 
 //  APHAppDelegate.m 
-//  Share the Journey 
+//  Embody 
 // 
 // Copyright (c) 2015, Sage Bionetworks. All rights reserved. 
 // 
@@ -36,7 +36,9 @@
 #import "APHProfileExtender.h"
 
 
+/*********************************************************************************/
 #pragma mark - Survey Identifiers
+/*********************************************************************************/
 
 NSString* const  kDailySurveyIdentifier                     = @"3-APHMoodSurvey-7259AC18-D711-47A6-ADBD-6CFCECDED1DF";
 static NSString* const  kDailyJournalSurveyIdentifier       = @"6-APHDailyJournal-80F09109-265A-49C6-9C5D-765E49AAF5D9";
@@ -45,8 +47,22 @@ static NSString* const  kFeedbackSurveyIdentifier           = @"8-Feedback-39484
 static NSString* const  kMyThoughtsSurveyIdentifier         = @"7-MyThoughts-14ffde40-1551-4b48-aae2-8fef38d61b61";
 static NSString* const  kWeeklySurveyIdentifier             = @"c-Weekly-394848ce-ca4f-4abe-b97e-fedbfd7ffb8e";
 static NSString* const  kBackgroundSurveyIdentifier         = @"1-BackgroundSurvey-394848ce-ca4f-4abe-b97e-fedbfd7ffb8e";
+static NSString* const  kFitnessTestSurveyIdentifier                    = @"3-APHFitnessTest-00000000-1111-1111-1111-F810BE28D995";
+static NSString* const  kSevenDaySurveyIdentifier                       = @"3-APHSevenDayAllocation-00000000-1111-1111-1111-F810BE28D995";
+static NSString* const  kHeartStrokeRiskSurveyIdentifier                = @"2-APHHeartAge-7259AC18-D711-47A6-ADBD-6CFCECDED1DF";
+static NSString* const  kHeartAgeBSurveyIdentifier                      = @"APHHeartAgeB-7259AC18-D711-47A6-ADBD-6CFCECDED1DF";
+static NSString* const  kCardioActivityAndSleepSurveyIdentifier         = @"2-CardioActivityAndSleepSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66";
+static NSString* const  kCardioVascularHealthSurveyIdentifer            = @"3-CardioVascularHealthSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66";
+static NSString* const  kDietSurveyIdentifier                           = @"4-DietSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66";
+static NSString* const  kWellBeingAndRiskPerceptionP1SurveyIdentifier   = @"2-WellBeingAndRiskPerceptionSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66";
+static NSString* const  kWellBeingAndRiskPerceptionP2SurveyIdentifier   = @"5-WellBeingAndRiskPerceptionSurvey-1E174061-5B02-11E4-8ED6-0800200C0000";
+static NSString* const  kPhysicalActivityReadinessSurveyIdentifier      = @"1-parqquiz-1E174061-5B02-11E4-8ED6-0800200C9A77";
+static NSString* const  kDailyCheckinSurveyIdentifier                   = @"1-DailyCheckin-be42dc21-4706-478a-a398-10cabb9c7d78";
+static NSString* const  kDayOneCheckinSurveyIdentifier                  = @"4-DayOne-be42dc21-4706-478a-a398-10cabb9c7d78";
 
+/*********************************************************************************/
 #pragma mark Data Collector Identifiers
+/*********************************************************************************/
 
 static NSString* const kMotionActivityCollector   = @"motionActivityCollector";
 static NSString* const kDisplacementCollector     = @"displacementCollector";
@@ -54,7 +70,9 @@ static NSString* const kHealthKitWorkoutCollector = @"HealthKitWorkoutCollector"
 static NSString* const kHealthKitDataCollector    = @"HealthKitDataCollector";
 static NSString* const kHealthKitSleepCollector   = @"HealthKitSleepCollector";
 
+/*********************************************************************************/
 #pragma mark - Initializations Options
+/*********************************************************************************/
 
 static NSString* const  kStudyIdentifier                = @"studyname";
 static NSString* const  kAppPrefix                      = @"studyname";
@@ -70,6 +88,13 @@ static NSString *const kMigrationTaskIdKey              = @"taskId";
 static NSString *const kMigrationOffsetByDaysKey        = @"offsetByDays";
 static NSString *const kMigrationGracePeriodInDaysKey   = @"gracePeriodInDays";
 static NSString *const kMigrationRecurringKindKey       = @"recurringKind";
+
+static NSString* const kPreviousVersion            = @"previousVersion";
+static NSString* const kCFBundleVersion            = @"CFBundleVersion";
+static NSString* const kCFBundleShortVersionString = @"CFBundleShortVersionString";
+static NSString* const kShortVersionStringKey      = @"shortVersionString";
+static NSString* const kMinorVersion               = @"version";
+
 
 typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 	APHMigrationRecurringKindWeekly = 0,
@@ -152,8 +177,17 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 
 - (void) setUpInitializationOptions
 {
-    [APCUtilities setRealApplicationName: @"Moody"];
-	
+    self.disableSignatureInConsent = YES;
+    [APCUtilities setRealApplicationName: @"Embody"];
+
+    NSDictionary *permissionsDescriptions = @{
+                                              @(kAPCSignUpPermissionsTypeLocation) : NSLocalizedString(@"Using your GPS enables the app to accurately determine distances travelled. Your actual location will never be shared.", @""),
+                                              @(kAPCSignUpPermissionsTypeCoremotion) : NSLocalizedString(@"Using the motion co-processor allows the app to determine your activity, helping the study better understand how activity level may influence disease.", @""),
+                                              @(kAPCSignUpPermissionsTypeMicrophone) : NSLocalizedString(@"Access to microphone is required for your Voice Recording Activity.", @""),
+                                              @(kAPCSignUpPermissionsTypeLocalNotifications) : NSLocalizedString(@"Allowing notifications enables the app to show you reminders.", @""),
+                                              @(kAPCSignUpPermissionsTypeHealthKit) : NSLocalizedString(@"On the next screen, you will be prompted to grant MyHeart Counts access to read and write some of your general and health information, such as height, weight and steps taken so you don't have to enter it again.", @""),
+                                              };
+
 	NSMutableDictionary * dictionary = [super defaultInitializationOptions];
 #ifdef DEBUG
 	self.environment = SBBEnvironmentStaging;
@@ -161,29 +195,75 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 	self.environment = SBBEnvironmentProd;
 #endif
     
+    dictionary = [self updateOptionsFor5OrOlder:dictionary];
+
+    
     [dictionary addEntriesFromDictionary:@{
                                            kStudyIdentifierKey                  : kStudyIdentifier,
                                            kAppPrefixKey                        : kAppPrefix,
                                            kBridgeEnvironmentKey                : @(self.environment),
-                                           kShareMessageKey : NSLocalizedString(@"Check out Moody, a research study app about mood.  Download it for iPhone at https://appsto.re/i6LF2f6", nil)
+                                           kHKReadPermissionsKey                : @[
+                                                   HKQuantityTypeIdentifierBodyMass,
+                                                   HKQuantityTypeIdentifierHeight,
+                                                   HKQuantityTypeIdentifierHeartRate,
+                                                   HKQuantityTypeIdentifierStepCount,
+                                                   HKQuantityTypeIdentifierFlightsClimbed,
+                                                   HKQuantityTypeIdentifierDistanceWalkingRunning,
+                                                   HKQuantityTypeIdentifierDistanceCycling,
+                                                   HKQuantityTypeIdentifierBloodPressureSystolic,
+                                                   HKQuantityTypeIdentifierBloodGlucose,
+                                                   HKQuantityTypeIdentifierBloodPressureDiastolic,
+                                                   HKQuantityTypeIdentifierOxygenSaturation,
+                                                   @{kHKWorkoutTypeKey  : HKWorkoutTypeIdentifier},
+                                                   @{kHKCategoryTypeKey : HKCategoryTypeIdentifierSleepAnalysis}
+                                                   ],
+                                           kHKWritePermissionsKey                : @[
+                                                   HKQuantityTypeIdentifierBodyMass,
+                                                   HKQuantityTypeIdentifierHeight
+                                                   ],
+                                           kAppServicesListRequiredKey           : @[
+                                                   @(kAPCSignUpPermissionsTypeLocation),
+                                                   @(kAPCSignUpPermissionsTypeCoremotion),
+                                                   @(kAPCSignUpPermissionsTypeLocalNotifications)
+                                                   ],
+                                           kAppServicesDescriptionsKey : permissionsDescriptions,
+                                           kAppProfileElementsListKey            : @[
+                                                   @(kAPCUserInfoItemTypeEmail),
+                                                   @(kAPCUserInfoItemTypeDateOfBirth),
+                                                   @(kAPCUserInfoItemTypeBiologicalSex),
+                                                   @(kAPCUserInfoItemTypeHeight),
+                                                   @(kAPCUserInfoItemTypeWeight),
+                                                   @(kAPCUserInfoItemTypeWakeUpTime),
+                                                   @(kAPCUserInfoItemTypeSleepTime),
+                                                   ],
+                                           kTaskReminderStartupDefaultTimeKey:@"9:00 AM",
+                                           kShareMessageKey : NSLocalizedString(@"Check out EgoCenter, for self-centered and egocentric health record keeping.  Download it for iPhone at http://apple.co/xxx", nil)
                                            }];
+    
+    
     self.initializationOptions = dictionary;
 	self.profileExtender = [[APHProfileExtender alloc] init];
 }
 
 - (NSDictionary*)researcherSpecifiedUnits
 {
+    
     NSDictionary* hkUnits =
     @{
       HKQuantityTypeIdentifierStepCount               : [HKUnit countUnit],
       HKQuantityTypeIdentifierBodyMass                : [HKUnit gramUnitWithMetricPrefix:HKMetricPrefixKilo],
       HKQuantityTypeIdentifierHeight                  : [HKUnit meterUnit],
-      HKQuantityTypeIdentifierDistanceCycling         : [HKUnit meterUnit],
+      HKQuantityTypeIdentifierHeartRate               : [[HKUnit countUnit] unitDividedByUnit:[HKUnit secondUnit]],
+      HKQuantityTypeIdentifierFlightsClimbed          : [HKUnit countUnit],
       HKQuantityTypeIdentifierDistanceWalkingRunning  : [HKUnit meterUnit],
-      HKQuantityTypeIdentifierFlightsClimbed          : [HKUnit countUnit]
+      HKQuantityTypeIdentifierDistanceCycling         : [HKUnit meterUnit],
+      HKQuantityTypeIdentifierBloodPressureSystolic   : [HKUnit millimeterOfMercuryUnit],
+      HKQuantityTypeIdentifierBloodGlucose            : [[HKUnit gramUnitWithMetricPrefix:HKMetricPrefixMilli] unitDividedByUnit:[HKUnit literUnitWithMetricPrefix:HKMetricPrefixDeci]],
+      HKQuantityTypeIdentifierBloodPressureDiastolic  : [HKUnit millimeterOfMercuryUnit],
+      HKQuantityTypeIdentifierOxygenSaturation        : [HKUnit percentUnit]
       };
     
-    return hkUnits;
+      return hkUnits;
 }
 
 
@@ -194,12 +274,38 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 	APCTaskReminder *exerciseSurveyReminder = [[APCTaskReminder alloc]initWithTaskID:kExerciseSurveyIdentifier reminderBody:NSLocalizedString(@"Exercise Survey", nil)];
 	APCTaskReminder *myThoughtsSurveyReminder = [[APCTaskReminder alloc]initWithTaskID:kMyThoughtsSurveyIdentifier reminderBody:NSLocalizedString(@"My Thoughts Survey", nil)];
 	APCTaskReminder *weeklySurveyReminder = [[APCTaskReminder alloc]initWithTaskID:kWeeklySurveyIdentifier reminderBody:NSLocalizedString(@"Weekly Survey", nil)];
+    APCTaskReminder *dailyCheckinReminder = [[APCTaskReminder alloc]initWithTaskID:kDailyCheckinSurveyIdentifier
+                                                                      reminderBody:NSLocalizedString(@"Daily Check-in", nil)];
+    APCTaskReminder *sevenDaySurveyReminder = [[APCTaskReminder alloc]initWithTaskID:kSevenDaySurveyIdentifier
+                                                                        reminderBody:NSLocalizedString(@"Activity and Sleep Assessment", nil)];
 	
 	[self.tasksReminder manageTaskReminder:dailySurveyReminder];
 	[self.tasksReminder manageTaskReminder:dailyJournalReminder];
 	[self.tasksReminder manageTaskReminder:exerciseSurveyReminder];
 	[self.tasksReminder manageTaskReminder:myThoughtsSurveyReminder];
-	[self.tasksReminder manageTaskReminder:weeklySurveyReminder];
+    [self.tasksReminder manageTaskReminder:weeklySurveyReminder];
+    [self.tasksReminder manageTaskReminder:dailyCheckinReminder];
+    [self.tasksReminder manageTaskReminder:sevenDaySurveyReminder];
+
+    
+    [self.tasksReminder.reminders removeAllObjects];
+    [self.tasksReminder manageTaskReminder:sevenDaySurveyReminder];
+    [self.tasksReminder manageTaskReminder:dailyCheckinReminder];
+    
+    if ([self doesPersisteStoreExist] == NO)
+    {
+        APCLogEvent(@"This app is being launched for the first time. Turn all reminders on");
+        for (APCTaskReminder *reminder in self.tasksReminder.reminders)
+        {
+            [[NSUserDefaults standardUserDefaults]setObject:reminder.reminderBody forKey:reminder.reminderIdentifier];
+        }
+        
+        if ([[UIApplication sharedApplication] currentUserNotificationSettings].types != UIUserNotificationTypeNone)
+        {
+            [self.tasksReminder setReminderOn:@YES];
+        }
+    }
+
 }
 
 - (id<APCProfileViewControllerDelegate>)profileExtenderDelegate
@@ -209,6 +315,8 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 
 - (void)setUpAppAppearance
 {
+    // MyHeartCounts kPrimaryAppColorKey : [UIColor colorWithRed:0.698 green:0.027 blue:0.220 alpha:1.000],
+    
 	[APCAppearanceInfo setAppearanceDictionary : @{ kPrimaryAppColorKey : [UIColor colorWithRed:0.937 green:0.004 blue:0.553 alpha:1.000],
                                                     @"3-APHMoodSurvey-7259AC18-D711-47A6-ADBD-6CFCECDED1DF" : [UIColor colorWithRed:0.937 green:0.004 blue:0.553 alpha:1.000],
                                                     @"6-APHDailyJournal-80F09109-265A-49C6-9C5D-765E49AAF5D9" : [UIColor colorWithRed:0.937 green:0.004 blue:0.553 alpha:1.000],
@@ -216,12 +324,32 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
                                                     @"8-Feedback-394848ce-ca4f-4abe-b97e-fedbfd7ffb8e" : [UIColor lightGrayColor],
                                                     @"7-MyThoughts-14ffde40-1551-4b48-aae2-8fef38d61b61" : [UIColor lightGrayColor],
                                                     @"c-Weekly-394848ce-ca4f-4abe-b97e-fedbfd7ffb8e" : [UIColor lightGrayColor],
-                                                    @"1-BackgroundSurvey-394848ce-ca4f-4abe-b97e-fedbfd7ffb8e" : [UIColor lightGrayColor] }];
+                                                    @"1-BackgroundSurvey-394848ce-ca4f-4abe-b97e-fedbfd7ffb8e" : [UIColor lightGrayColor],
+                                                    @"3-APHFitnessTest-00000000-1111-1111-1111-F810BE28D995" :[UIColor appTertiaryBlueColor],
+                                                    @"3-APHSevenDayAllocation-00000000-1111-1111-1111-F810BE28D995":[UIColor appTertiaryRedColor],
+                                                    @"2-APHHeartAge-7259AC18-D711-47A6-ADBD-6CFCECDED1DF" : [UIColor lightGrayColor],
+                                                    @"APHHeartAgeB-7259AC18-D711-47A6-ADBD-6CFCECDED1DF" : [UIColor lightGrayColor],
+                                                    @"2-CardioActivityAndSleepSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66" : [UIColor lightGrayColor],
+                                                    @"3-CardioVascularHealthSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66" : [UIColor lightGrayColor],
+                                                    @"4-DietSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66" : [UIColor lightGrayColor],
+                                                    @"2-WellBeingAndRiskPerceptionSurvey-1E174061-5B02-11E4-8ED6-0800200C9A66" : [UIColor lightGrayColor],
+                                                    @"1-parqquiz-1E174061-5B02-11E4-8ED6-0800200C9A77" : [UIColor lightGrayColor],
+                                                    @"1-DailyCheckin-be42dc21-4706-478a-a398-10cabb9c7d78" : [UIColor lightGrayColor],
+                                                    @"5-WellBeingAndRiskPerceptionSurvey-1E174061-5B02-11E4-8ED6-0800200C0000" : [UIColor lightGrayColor],
+                                                    @"4-DayOne-be42dc21-4706-478a-a398-10cabb9c7d78" : [UIColor lightGrayColor]
+                                                    
+                                                    
+                                                    }];
+    
+    
+    
 	[[UINavigationBar appearance] setTintColor:[UIColor appPrimaryColor]];
 	[[UINavigationBar appearance] setTitleTextAttributes : @{ NSForegroundColorAttributeName : [UIColor appSecondaryColor2],
                                                               NSFontAttributeName : [UIFont appNavBarTitleFont] }];
 	[[UIView appearance] setTintColor:[UIColor appPrimaryColor]];
 	
+    self.dataSubstrate.parameters.hideConsent = NO;
+    self.dataSubstrate.parameters.hideExampleConsent = NO;
 	self.dataSubstrate.parameters.bypassServer = YES;
 }
 
@@ -241,6 +369,14 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 - (BOOL) isVideoShown
 {
     return [[NSUserDefaults standardUserDefaults] boolForKey:kVideoShownKey];
+}
+
+
+- (NSMutableDictionary *) updateOptionsFor5OrOlder:(NSMutableDictionary *)initializationOptions {
+    if (![APCDeviceHardware isiPhone5SOrNewer]) {
+        [initializationOptions setValue:@"APHTasksAndSchedules_NoM7" forKey:kTasksAndSchedulesJSONFileNameKey];
+    }
+    return initializationOptions;
 }
 
 - (NSArray *)allSetTextBlocks

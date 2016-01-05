@@ -32,7 +32,7 @@
 // 
  
 #import <UIKit/UIKit.h>
-#import "Library/Model/APHTableViewItem.h"
+#import "APHTableViewItem.h"
 
 @interface APHWalkTestViewController : UITableViewController
 
