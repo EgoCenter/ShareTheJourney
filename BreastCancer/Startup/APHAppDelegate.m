@@ -185,7 +185,7 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
                                               @(kAPCSignUpPermissionsTypeCoremotion) : NSLocalizedString(@"Using the motion co-processor allows the app to determine your activity, helping the study better understand how activity level may influence disease.", @""),
                                               @(kAPCSignUpPermissionsTypeMicrophone) : NSLocalizedString(@"Access to microphone is required for your Voice Recording Activity.", @""),
                                               @(kAPCSignUpPermissionsTypeLocalNotifications) : NSLocalizedString(@"Allowing notifications enables the app to show you reminders.", @""),
-                                              @(kAPCSignUpPermissionsTypeHealthKit) : NSLocalizedString(@"On the next screen, you will be prompted to grant MyHeart Counts access to read and write some of your general and health information, such as height, weight and steps taken so you don't have to enter it again.", @""),
+                                              @(kAPCSignUpPermissionsTypeHealthKit) : NSLocalizedString(@"On the next screen, you will be prompted to grant EmBody access to read and write some of your general and health information, such as height, weight and steps taken so you don't have to enter it again.", @""),
                                               };
 
 	NSMutableDictionary * dictionary = [super defaultInitializationOptions];
@@ -356,7 +356,8 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
 - (void) showOnBoarding
 {
     [super showOnBoarding];
-    [self showStudyOverview];
+   // [self showStudyOverview];
+    [self showConsent];
 }
 
 
@@ -365,6 +366,16 @@ typedef NS_ENUM(NSUInteger, APHMigrationRecurringKinds) {
     APCStudyOverviewViewController *studyController = [[UIStoryboard storyboardWithName:@"APCOnboarding" bundle:[NSBundle appleCoreBundle]] instantiateViewControllerWithIdentifier:@"StudyOverviewVC"];
     [self setUpRootViewController:studyController];
 }
+
+- (void) showConsent
+{
+    APCConsentTask *task = [[APCConsentTask alloc] initWithIdentifier:@"Consent"
+                                                   propertiesFileName:kConsentPropertiesFileName];
+    ORKTaskViewController *consentVC = [[ORKTaskViewController alloc] initWithTask:task
+                                                                       taskRunUUID:[NSUUID UUID]];
+    [self setUpRootViewController:consentVC];
+}
+
 
 - (BOOL) isVideoShown
 {

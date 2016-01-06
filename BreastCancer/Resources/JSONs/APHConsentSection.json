@@ -66,13 +66,13 @@
          },
          {
             "sectionType" : "overview",
-            "sectionSummary" : "This simple walkthrough will explain the research study, the impact it may have on your life and will allow you to provide your consent to participate.",
+            "sectionSummary" : "This simple walkthrough will explain how this app works, the impact it may have on your life and will allow you to provide your consent to selectively participate in different research studies.",
             "sectionHtmlContent" : "1welcome"
          },
          {
              "sectionType" : "custom",
              "sectionTitle": "We'll Test Your Understanding",
-             "sectionSummary": "At the end of this walkthrough, we will ask you a few questions about the details of the study.",
+             "sectionSummary": "At the end of this walkthrough, we will ask you a few questions to confirm that you understood the details.",
              "sectionImage": "quiz_image",
              "sectionHtmlContent" : "2quiz_headsup"
      
@@ -88,7 +88,7 @@
          {
              "sectionType" : "custom",
              "sectionTitle": "Sensor Data",
-             "sectionSummary": "This study will also gather sensor data from your iPhone and personal devices with your permission.",
+             "sectionSummary": "This app will also gather sensor data from your iPhone and personal devices/apps connected to the Health App with your permission.",
              "sectionHtmlContent" : "4sensordata",
              "sectionImage": "01_Activities_to_SensorData",
              "sectionAnimationUrl":"01_Activities_to_SensorData"
@@ -96,34 +96,34 @@
          {
 			"sectionType" : "dataGathering",
             "sectionTitle": "Data Processing",
-            "sectionSummary" : "Your study data (survey, tasks and sensors) will be combined with similar data from other participants.",
+            "sectionSummary" : "Your health data (survey, tasks and sensors) will stay on your phone where you can visualize and analyse it",
             "sectionHtmlContent" : "5dataprocessing",
             "sectionAnimationUrl":"02_SensorData_to_DataGathering"
 		 },
 		 {
 			"sectionType" : "privacy",
             "sectionTitle": "Protecting your Data",
-            "sectionSummary": "We will replace your name with a random code. The coded data will be encrypted and stored on a secure Cloud server under the control of Sage Bionetworks to prevent improper access.",
+            "sectionSummary": "Again, your data is yours and will never leave your phone. The coded data will be encrypted and the app will be protected by a PIN/TouchID to prevent improper access.",
             "sectionHtmlContent" : "6protectingdata"
 		 },
 		 {
             "sectionType" : "dataUse",
             "sectionTitle": "Data Use",
-            "sectionSummary": "The data will be used for this research and may be shared with research partners worldwide.",
+            "sectionSummary": "The data will be used to provide insights into your own health. You will be able to share different views of your data with care providers, family and friends or should you wish to you can share anonymized raw data with selected research projects worldwide.",
             "sectionHtmlContent" : "7datause"
 
 		 },
 		 {
 			"sectionType" : "timeCommitment",
 			"sectionTitle" : "Issues to Consider",
-            "sectionSummary": "This study will take about 20 minutes per week.",
+            "sectionSummary": "This app will only require your attention for a few minites each day but the more you engage the better the results.",
             "sectionHtmlContent" : "8time"
 
 		 },
 		 {
 			"sectionType" : "studySurvey",
             "sectionTitle" : "Study Survey",
-            "sectionSummary": "We will ask you to rate your fatigue, thinking, sleep, mood and exercise performance on a scale of 1 to 5 daily. We will also ask you to answer brief weekly and monthly surveys about your symptoms to track any changes."
+            "sectionSummary": "We will ask you to rate your fatigue, thinking, sleep, mood and exercise performance on a scale of 1 to 5 daily. We will also ask you to answer brief weekly and monthly surveys about your symptoms and general wellbeing to track any changes."
 		 },
 		 {
 			"sectionType" : "studyTasks",
@@ -134,7 +134,7 @@
 		 {
 			"sectionType" : "withdrawing",
 			"sectionTitle" : "Withdrawing",
-             "sectionSummary" : "Your participation is voluntary.  You may withdraw your consent and discontinue participation at any time.",
+             "sectionSummary" : "Your participation in any research studies is voluntary.  You may withdraw your consent and discontinue participation at any time.",
             "sectionHtmlContent" : "11withdrawing"
 		 },
          {
@@ -148,7 +148,7 @@
          {
              "sectionType" : "custom",
              "sectionTitle": "Issues to Consider",
-             "sectionSummary": "This research is not a treatment study.  Some questions may make you feel uncomfortable.  Simply do not respond.",
+             "sectionSummary": "This app is not a replacement for professional health care but a very good complement. If some questions may make you feel uncomfortable - simply do not respond. But again, this is your personal and private health record why you do not have to worry about unauthorized access",
              "sectionHtmlContent" : "13issues_survey",
              "sectionImage": "11_IssuesToConsider1",
              "sectionAnimationUrl":"11_IssuesToConsider1"
@@ -156,7 +156,7 @@
          {
              "sectionType" : "custom",
              "sectionTitle": "Issues to Consider",
-             "sectionSummary": "Participating in this study could generate a wide range of emotions.",
+             "sectionSummary": "Using this app could generate a wide range of emotions.",
              "sectionHtmlContent" : "14issues_mood",
              "sectionImage": "12_IssuesToConsider2",
              "sectionAnimationUrl":"12_IssuesToConside2"
@@ -164,7 +164,7 @@
          {
              "sectionType" : "custom",
              "sectionTitle": "Risk to Privacy",
-             "sectionSummary": "We will make every effort to protect your information, but total anonymity cannot be guaranteed.",
+             "sectionSummary": "We will make every effort to protect your information, but total data security cannot be guaranteed.",
              "sectionHtmlContent" : "15privacy_risk",
              "sectionImage": "13_RiskToPrivacy",
              "sectionAnimationUrl":"13_RiskToPrivacy"
