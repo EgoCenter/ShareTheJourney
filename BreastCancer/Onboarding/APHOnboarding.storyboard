@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -10,11 +11,11 @@
             <objects>
                 <tableViewController storyboardIdentifier="APHInclusionCriteriaViewController" id="INW-Hi-Q31" customClass="APHInclusionCriteriaViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="225" sectionHeaderHeight="22" sectionFooterHeight="22" id="SRW-dk-KDb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="uYw-Tm-LSD">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="900" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
@@ -22,8 +23,10 @@
                             <tableViewSection id="tji-VZ-YK6">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="225" id="kc4-Gb-u8g">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kc4-Gb-u8g" id="DTl-mf-X0f">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-Ee-2ax">
@@ -100,8 +103,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="225" id="ToQ-tW-OYT">
+                                        <rect key="frame" x="0.0" y="225" width="320" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ToQ-tW-OYT" id="zxa-oX-MJI">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3M-Ah-ZcV">
@@ -178,8 +183,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="225" id="K0W-DG-uhq">
+                                        <rect key="frame" x="0.0" y="450" width="320" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K0W-DG-uhq" id="U4W-p6-eab">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nW9-78-X2F">
@@ -256,8 +263,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="225" id="IML-Gr-4gB">
+                                        <rect key="frame" x="0.0" y="675" width="320" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IML-Gr-4gB" id="XVe-Yf-nP4">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8Q-qJ-isy">
